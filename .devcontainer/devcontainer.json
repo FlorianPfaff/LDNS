@@ -1,0 +1,21 @@
+{
+    "name": "LDNS Development Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "python.defaultInterpreterPath": "/usr/local/bin/python"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    "postCreateCommand": "python -m pip install --upgrade pip poetry && python -m poetry install --no-interaction --no-ansi",
+    "remoteUser": "vscode",
+    "forwardPorts": [],
+    "portsAttributes": {},
+    "mounts": []
+}
